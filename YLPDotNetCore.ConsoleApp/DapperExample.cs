@@ -11,17 +11,17 @@ namespace YLPDotNetCore.ConsoleApp
 {
     internal class DapperExample
     {
-        public void run()
+        public void Run()
         {
-            //update(4, "update dap title", "update dap author", "update dap content");
-            delete(6);
-            read();
-            //edit(2);
-            //edit(4);
-            // create("dap title2", "dap author2", "dap content2");
+            //Update(4, "update dap title", "update dap author", "update dap content");
+            Delete(6);
+            Read();
+            //Edit(2);
+            //Edit(4);
+            //Create("dap title2", "dap author2", "dap content2");
         }
 
-        public void read()
+        public void Read()
         {
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> lst = db.Query<BlogDto>("SELECT * FROM Tbl_Blog").ToList();
@@ -35,7 +35,7 @@ namespace YLPDotNetCore.ConsoleApp
             }
         }
 
-        public void edit(int id)
+        public void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogDto>("SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId", new BlogDto { BlogId = id}).FirstOrDefault();
@@ -52,7 +52,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(item.BlogContent);
         }
 
-        public void create(string title, string author, string content)
+        public void Create(string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -77,7 +77,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void update(int id, string title, string author, string content)
+        public void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -99,7 +99,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void delete(int id)
+        public void Delete(int id)
         {
             var item = new BlogDto
             {

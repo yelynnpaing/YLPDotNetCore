@@ -15,7 +15,7 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //for dapper
 //DapperExample dapperExample = new DapperExample();
-//dapperExample.run();
+//dapperExample.Run();
 
 //EF Core 
 EFCoreExample eFCoreExample = new EFCoreExample();
