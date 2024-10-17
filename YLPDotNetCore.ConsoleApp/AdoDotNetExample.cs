@@ -17,7 +17,7 @@ namespace YLPDotNetCore.ConsoleApp
             UserID = "sa", 
             Password = "sasa@123",
         };
-        public void read()
+        public void Read()
         {
                         
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
@@ -45,7 +45,7 @@ namespace YLPDotNetCore.ConsoleApp
             }
         }
 
-        public void edit(int id)
+        public void Edit(int id)
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
@@ -73,7 +73,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine("-----------------------------");
         }
 
-        public void create(string title, string author, string content)
+        public void Create(string title, string author, string content)
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
@@ -98,7 +98,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void update(int id, string title, string author, string content) 
+        public void Update(int id, string title, string author, string content) 
         {
             SqlConnection connnection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connnection.Open();
@@ -119,7 +119,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void delete(int id)
+        public void Delete(int id)
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();

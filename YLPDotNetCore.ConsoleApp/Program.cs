@@ -5,19 +5,20 @@ using YLPDotNetCore.ConsoleApp;
 
 Console.WriteLine("Hello, World!");
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-//adoDotNetExample.read();
-//adoDotNetExample.create("Sample Title", "Sample Author", "Sample Content");
-//adoDotNetExample.edit(2);
-//adoDotNetExample.edit(3);
-//adoDotNetExample.update(1, "update title", "update author", "update content");
-//adoDotNetExample.delete(2);
+//for AdoDotNet
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Read();
+//adoDotNetExample.Create("Sample Title", "Sample Author", "Sample Content");
+//adoDotNetExample.Edit(2);
+//adoDotNetExample.Edit(3);
+//adoDotNetExample.Update(1, "update title", "update author", "update content");
+//adoDotNetExample.Delete(2);
 
 //for dapper
 //DapperExample dapperExample = new DapperExample();
 //dapperExample.Run();
 
-//EF Core 
+//for EF Core 
 EFCoreExample eFCoreExample = new EFCoreExample();
 eFCoreExample.Run();
 
