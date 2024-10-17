@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YLPDotNetCore.ConsoleApp.Dtos;
 
-namespace YLPDotNetCore.ConsoleApp
+namespace YLPDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
@@ -12,7 +13,7 @@ namespace YLPDotNetCore.ConsoleApp
         public void Run()
         {
 
-            Delete(14);
+            Delete(13);
             Read();
             //Edit(1);
             //Edit(2);
@@ -23,9 +24,9 @@ namespace YLPDotNetCore.ConsoleApp
         private void Read()
         {
             var lst = db.Blogs.ToList();
-            foreach(BlogDto item in lst)
+            foreach (BlogDto item in lst)
             {
-                Console.WriteLine(item.BlogId);             
+                Console.WriteLine(item.BlogId);
                 Console.WriteLine(item.BlogTitle);
                 Console.WriteLine(item.BlogAuthor);
                 Console.WriteLine(item.BlogContent);
@@ -36,7 +37,7 @@ namespace YLPDotNetCore.ConsoleApp
         {
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
 
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;
@@ -65,7 +66,7 @@ namespace YLPDotNetCore.ConsoleApp
         private void Update(int id, string title, string author, string content)
         {
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;
@@ -84,7 +85,7 @@ namespace YLPDotNetCore.ConsoleApp
         private void Delete(int id)
         {
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found");
                 return;

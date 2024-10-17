@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YLPDotNetCore.ConsoleApp
+namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -14,12 +14,12 @@ namespace YLPDotNetCore.ConsoleApp
         {
             DataSource = "DESKTOP-L3SMK21\\SQLEXPRESS",
             InitialCatalog = "ylpDotNetCore",
-            UserID = "sa", 
+            UserID = "sa",
             Password = "sasa@123",
         };
         public void Read()
         {
-                        
+
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             //SqlConnection connection = new SqlConnection("Data Source=DESKTOP-L3SMK21\\SQLEXPRESS;Initial Catalog=ylpDotNetCore;User ID=sa;Password=sasa@123");
 
@@ -58,7 +58,7 @@ namespace YLPDotNetCore.ConsoleApp
             adapter.Fill(dt);
             connection.Close();
 
-            if(dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No data found.");
                 return;
@@ -98,7 +98,7 @@ namespace YLPDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void Update(int id, string title, string author, string content) 
+        public void Update(int id, string title, string author, string content)
         {
             SqlConnection connnection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connnection.Open();

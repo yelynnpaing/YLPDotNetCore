@@ -6,8 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Dapper;
+using YLPDotNetCore.ConsoleApp.Dtos;
+using YLPDotNetCore.ConsoleApp.Services;
 
-namespace YLPDotNetCore.ConsoleApp
+namespace YLPDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -38,9 +40,9 @@ namespace YLPDotNetCore.ConsoleApp
         public void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogDto>("SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId", new BlogDto { BlogId = id}).FirstOrDefault();
+            var item = db.Query<BlogDto>("SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
 
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("Data not found");
                 return;
