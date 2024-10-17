@@ -9,12 +9,13 @@ namespace YLPDotNetCore.ConsoleApp
 {
     internal static class ConnectionString
     {
-        public static SqlConnectionStringBuilder SqlConnectionStringBuilder = new SqlConnectionStringBuilder() 
-        { 
+        public static SqlConnectionStringBuilder SqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        {
             DataSource = "DESKTOP-L3SMK21\\SQLEXPRESS",
             InitialCatalog = "YLPDotNetCore",
             UserID = "sa",
-            Password = "sasa@123"
+            Password = "sasa@123",
+            TrustServerCertificate = true
         };
     }
 }
