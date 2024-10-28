@@ -10,7 +10,7 @@ namespace YLPDotNetCore.RestApi
             InitialCatalog = "YLPDotNetCore",
             UserID = "sa",
             Password = "sasa@123",
-            //TrustServerCertificate = true  //for only EF Core
+            TrustServerCertificate = true  //for only EF Core
         };
     }
 }
