@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppHtt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppHttpClientExample", "YLPDotNetCore.ConsoleAppHttpClientExample\YLPDotNetCore.ConsoleAppHttpClientExample.csproj", "{6B34B483-7049-450D-A8E4-71C8EDF1A5EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppRestClientExamples", "YLPDotNetCore.ConsoleAppRestClientExamples\YLPDotNetCore.ConsoleAppRestClientExamples.csproj", "{7652F882-6EE0-4916-9628-EFC8AE4CD774}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{6B34B483-7049-450D-A8E4-71C8EDF1A5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B34B483-7049-450D-A8E4-71C8EDF1A5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B34B483-7049-450D-A8E4-71C8EDF1A5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7652F882-6EE0-4916-9628-EFC8AE4CD774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7652F882-6EE0-4916-9628-EFC8AE4CD774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7652F882-6EE0-4916-9628-EFC8AE4CD774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7652F882-6EE0-4916-9628-EFC8AE4CD774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
