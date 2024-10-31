@@ -10,7 +10,7 @@ namespace YLPDotNetCore.PizzaApi
             InitialCatalog = "YLPDotNetCore",
             UserID = "sa",
             Password = "sasa@123",
-            TrustServerCertificate = true
+            //TrustServerCertificate = true
         };
     }
 }

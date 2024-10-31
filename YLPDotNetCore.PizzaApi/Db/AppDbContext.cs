@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -80,4 +81,29 @@ public class PizzaOrderDetailModel
     public int PizzaOrderDetailId { get; set; }
     public string PizzaOrderInvoiceNo { get; set; }
     public int PizzaExtraId { get; set; }
+}
+
+public class PizzaOrderInvoiceHeadModel
+{
+    public int PizzaOrderId { get; set; }
+    public string PizzaOrderInvoiceNo { get; set; }
+    public int PizzaId { get; set; }
+    public decimal TotalAmount { get; set; }
+    public string Pizza { get; set; }
+    public decimal Price { get; set; }
+}
+
+public class PizzaOrderInvoiceHeadDetailModel
+{
+    public int PizzaOrderDetailId { get; set; }
+    public string PizzaOrderInvoiceNo { get; set; }
+    public int PizzaExtraId { get; set; }
+    public string PizzaExtraName { get; set; }
+    public decimal Price { get; set; }
+}
+
+public class PizzaOrderInvoiceResponse
+{
+    public PizzaOrderInvoiceHeadModel Order { get; set; }
+    public List <PizzaOrderInvoiceHeadDetailModel> OrderDetail { get; set; }
 }
