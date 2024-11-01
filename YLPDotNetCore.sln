@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppRes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.PizzaApi", "YLPDotNetCore.PizzaApi\YLPDotNetCore.PizzaApi.csproj", "{F91C009B-980D-46A3-8D42-3DB6331240F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppRefitExamples", "YLPDotNetCore.ConsoleAppRefitExamples\YLPDotNetCore.ConsoleAppRefitExamples.csproj", "{F54D2FE8-B6AC-475B-B4ED-D18FAB42921E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{F91C009B-980D-46A3-8D42-3DB6331240F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F91C009B-980D-46A3-8D42-3DB6331240F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F91C009B-980D-46A3-8D42-3DB6331240F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F54D2FE8-B6AC-475B-B4ED-D18FAB42921E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54D2FE8-B6AC-475B-B4ED-D18FAB42921E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54D2FE8-B6AC-475B-B4ED-D18FAB42921E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54D2FE8-B6AC-475B-B4ED-D18FAB42921E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
