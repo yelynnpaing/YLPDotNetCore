@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppRef
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.WinFormsApp", "YLPDotNetCore.WinFormsApp\YLPDotNetCore.WinFormsApp.csproj", "{83BCF7E3-9506-43B5-98FD-7966C54CFD6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.WindowFormAppSqlInjection", "YLPDotNetCore.WindowFormAppSqlInjection\YLPDotNetCore.WindowFormAppSqlInjection.csproj", "{2E5FC503-F839-4B95-849E-E6D4D106A3AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{83BCF7E3-9506-43B5-98FD-7966C54CFD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83BCF7E3-9506-43B5-98FD-7966C54CFD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83BCF7E3-9506-43B5-98FD-7966C54CFD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5FC503-F839-4B95-849E-E6D4D106A3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5FC503-F839-4B95-849E-E6D4D106A3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5FC503-F839-4B95-849E-E6D4D106A3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5FC503-F839-4B95-849E-E6D4D106A3AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
