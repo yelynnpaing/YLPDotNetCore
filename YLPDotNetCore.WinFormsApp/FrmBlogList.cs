@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,8 @@ namespace YLPDotNetCore.WinFormsApp
             if (e.RowIndex == -1) return;
             int blogId = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["colId"].Value);
 
+            #region If Case
+
             if (e.ColumnIndex == (int)ENumFormControlType.Edit)
             {
                 FrmBlog blog = new FrmBlog(blogId);
@@ -54,6 +57,36 @@ namespace YLPDotNetCore.WinFormsApp
                 delete(blogId);
                 blogList();
             }
+
+            #endregion
+
+            #region Switch Case
+
+            int index = e.ColumnIndex;
+            ENumFormControlType eNumFormControlType = (ENumFormControlType)index;
+            switch (eNumFormControlType)
+            {
+                case ENumFormControlType.Edit:
+                    FrmBlog blog = new FrmBlog(blogId);
+                    blog.ShowDialog();
+
+                    blogList();
+                    break;
+                case ENumFormControlType.Delete:
+                    var dialogResult = MessageBox.Show("Are you sure want to delete ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult != DialogResult.Yes) return;
+
+                    delete(blogId);
+                    blogList();
+                    break;
+                case ENumFormControlType.None:
+                    break;
+                default:
+                    MessageBox.Show("Invalid case");
+                    break;
+            }
+
+            #endregion 
         }
 
         private void delete(int id)
