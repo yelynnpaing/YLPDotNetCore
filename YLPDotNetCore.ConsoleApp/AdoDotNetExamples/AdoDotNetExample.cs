@@ -10,17 +10,25 @@ namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
-        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //{
+        //    DataSource = "DESKTOP-L3SMK21\\SQLEXPRESS",
+        //    InitialCatalog = "ylpDotNetCore",
+        //    UserID = "sa",
+        //    Password = "sasa@123",
+        //};
+
+        private readonly SqlConnectionStringBuilder _connectionStringBuilder;
+
+        public AdoDotNetExample(SqlConnectionStringBuilder connectionStringBuilder)
         {
-            DataSource = "DESKTOP-L3SMK21\\SQLEXPRESS",
-            InitialCatalog = "ylpDotNetCore",
-            UserID = "sa",
-            Password = "sasa@123",
-        };
+            _connectionStringBuilder = connectionStringBuilder;
+        }
+
         public void Read()
         {
 
-            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_connectionStringBuilder.ConnectionString);
             //SqlConnection connection = new SqlConnection("Data Source=DESKTOP-L3SMK21\\SQLEXPRESS;Initial Catalog=ylpDotNetCore;User ID=sa;Password=sasa@123");
 
             connection.Open();
@@ -47,7 +55,7 @@ namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 
         public void Edit(int id)
         {
-            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_connectionStringBuilder.ConnectionString);
 
             connection.Open();
             string query = "SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId";
@@ -75,7 +83,7 @@ namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 
         public void Create(string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
@@ -100,20 +108,20 @@ namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 
         public void Update(int id, string title, string author, string content)
         {
-            SqlConnection connnection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
-            connnection.Open();
+            SqlConnection connection = new SqlConnection(_connectionStringBuilder.ConnectionString);
+            connection.Open();
             string query = @"UPDATE [dbo].[Tbl_Blog]
                 SET [BlogTitle] = @BlogTitle
                   ,[BlogAuthor] = @BlogAuthor
                   ,[BlogContent] = @BlogContent
                 WHERE BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query, connnection);
+            SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BlogContent", content);
             int result = cmd.ExecuteNonQuery();
-            connnection.Close();
+            connection.Close();
 
             string message = result > 0 ? "Update Successful." : "Update fail";
             Console.WriteLine(message);
@@ -121,7 +129,7 @@ namespace YLPDotNetCore.ConsoleApp.AdoDotNetExamples
 
         public void Delete(int id)
         {
-            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
             string query = "DELETE FROM Tbl_Blog WHERE BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
