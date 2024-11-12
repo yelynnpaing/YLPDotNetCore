@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.NLayer.DataAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MinimalApi", "YLPDotNetCore.MinimalApi\YLPDotNetCore.MinimalApi.csproj", "{664153ED-F0A5-4042-8835-2EB9A301F963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MvcApp", "YLPDotNetCore.MvcApp\YLPDotNetCore.MvcApp.csproj", "{DD89EB1F-A896-428C-AE27-DFE8E6DA301F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{664153ED-F0A5-4042-8835-2EB9A301F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{664153ED-F0A5-4042-8835-2EB9A301F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{664153ED-F0A5-4042-8835-2EB9A301F963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD89EB1F-A896-428C-AE27-DFE8E6DA301F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD89EB1F-A896-428C-AE27-DFE8E6DA301F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD89EB1F-A896-428C-AE27-DFE8E6DA301F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD89EB1F-A896-428C-AE27-DFE8E6DA301F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
