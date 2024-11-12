@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.NLayer.Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.NLayer.DataAccess", "YLPDotNetCore.NLayer.DataAccess\YLPDotNetCore.NLayer.DataAccess.csproj", "{053A149C-FC7D-4C33-BA25-B35DF222572A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MinimalApi", "YLPDotNetCore.MinimalApi\YLPDotNetCore.MinimalApi.csproj", "{664153ED-F0A5-4042-8835-2EB9A301F963}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{053A149C-FC7D-4C33-BA25-B35DF222572A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053A149C-FC7D-4C33-BA25-B35DF222572A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053A149C-FC7D-4C33-BA25-B35DF222572A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664153ED-F0A5-4042-8835-2EB9A301F963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664153ED-F0A5-4042-8835-2EB9A301F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664153ED-F0A5-4042-8835-2EB9A301F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664153ED-F0A5-4042-8835-2EB9A301F963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
