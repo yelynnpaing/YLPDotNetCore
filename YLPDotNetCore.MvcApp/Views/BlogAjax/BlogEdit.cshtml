@@ -1,0 +1,66 @@
+﻿@model BlogModel
+<section class="m-5 p-5 border bordered-1">
+    <h2 class="mb-5">Blog Edit</h2>
+    <div class="mb-3">
+        <label class="form-label"> Title : </label>
+        <input type="text" class="form-control" id="BlogTitle" name="BlogTitle" value="@Model.BlogTitle" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label"> Author : </label>
+        <input type="text" class="form-control" id="BlogAuthor" name="BlogAuthor" value="@Model.BlogAuthor" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label"> Content : </label>
+        <input type="text" class="form-control" id="BlogContent" name="BlogContent" value="@Model.BlogContent" />
+    </div>
+    <a href="/BlogAjax" class="btn btn-secondary">Back</a>
+    <button type="button" class="btn btn-primary" id="btnUpdate">Update</button>
+</section>
+
+@section scripts {
+    <script>
+        $('#btnUpdate').click(function(){
+            let title = $('#BlogTitle').val();
+            let author = $('#BlogAuthor').val();
+            let content = $('#BlogContent').val();
+
+            let _reqModel = {
+                Blogtitle : title,
+                BlogAuthor : author,
+                BlogContent : content
+            }
+
+            $.ajax({
+                url:"/BlogAjax/Update/" + @Model.BlogId,
+                // data: JSON.stringify(_reqModel),
+                data:{blog: _reqModel},
+                type:"POST",
+                // contentType:"application/json;charset=utf-8",
+                dataType:"json",
+                success: function(result){
+                    // console.log(result);
+                    if(result.IsSuccess){
+                        Swal.fire({
+                          title: "Success!",
+                          text: result.Message,
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            location.href = ("/BlogAjax");
+                          }
+                        });
+                    }
+                    else{
+                         Swal.fire({
+                          title: "Error!",
+                          text: result.Message,
+                          icon: "error"
+                     });
+                    }
+                },
+                error: function(errormessage){
+                    console.log(errormessage.responseText);
+                }
+            });
+        })
+    </script>
+}

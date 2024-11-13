@@ -12,3 +12,9 @@ public class BlogModel
     public string? BlogAuthor { get; set; }
     public string? BlogContent { get; set; }
 }
+
+public class BlogMessageResoponseModel
+{
+    public bool IsSuccess { get; set; }
+    public string Message { get; set; }
+}
