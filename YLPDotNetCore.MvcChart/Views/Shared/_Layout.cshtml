@@ -31,10 +31,11 @@
         </nav>
     </header>
     <div class="container">
-        <a href="/ApexChart/PieChart" class="btn btn-success m-5 text-white">View Pie chart</a>
-        <a href="/ApexChart/LineChart" class="btn btn-primary m-5 text-white">View Line chart</a>
-        <a href="/ChartJs/BarChart" class="btn btn-primary m-5 text-white">Bar Chart</a>
-        <a href="/ChartJs/LineChart" class="btn btn-primary m-5 text-white"> Chart Js (Line)</a>
+        <a href="/ApexChart/PieChart" class="btn btn-success m-5 text-white">Apex Chart(Pie)</a>
+        <a href="/ApexChart/LineChart" class="btn btn-primary m-5 text-white">Apex Chart(Line)</a>
+        <a href="/ChartJs/BarChart" class="btn btn-primary m-5 text-white">Chart Js(Bar)</a>
+        <a href="/ChartJs/LineChart" class="btn btn-primary m-5 text-white"> Chart Js(Line)</a>
+        <a href="/HighCharts/PieChart" class="btn btn-primary m-5 text-white"> HighChart(Pie)</a>
 
         <main role="main" class="pb-3">
             @RenderBody()
@@ -51,6 +52,10 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 
     @await RenderSectionAsync("scripts", required: false)
 </body>
