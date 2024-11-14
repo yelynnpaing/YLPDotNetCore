@@ -36,6 +36,7 @@
         <a href="/ChartJs/BarChart" class="btn btn-primary m-5 text-white">Chart Js(Bar)</a>
         <a href="/ChartJs/LineChart" class="btn btn-primary m-5 text-white"> Chart Js(Line)</a>
         <a href="/HighCharts/PieChart" class="btn btn-primary m-5 text-white"> HighChart(Pie)</a>
+        <a href="/CanvasJs/LineChart" class="btn btn-success m-5 text-white"> CanvasJs(Line)</a>
 
         <main role="main" class="pb-3">
             @RenderBody()
@@ -51,10 +52,15 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
+
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
 
     @await RenderSectionAsync("scripts", required: false)
