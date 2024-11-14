@@ -33,6 +33,8 @@
     <div class="container">
         <a href="/ApexChart/PieChart" class="btn btn-success m-5 text-white">View Pie chart</a>
         <a href="/ApexChart/LineChart" class="btn btn-primary m-5 text-white">View Line chart</a>
+        <a href="/ChartJs/BarChart" class="btn btn-primary m-5 text-white">Bar Chart</a>
+        <a href="/ChartJs/LineChart" class="btn btn-primary m-5 text-white"> Chart Js (Line)</a>
 
         <main role="main" class="pb-3">
             @RenderBody()
@@ -48,6 +50,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     @await RenderSectionAsync("scripts", required: false)
 </body>
