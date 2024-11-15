@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MvcChart", "Y
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppLogging", "YLPDotNetCore.ConsoleAppLogging\YLPDotNetCore.ConsoleAppLogging.csproj", "{71CCBAE4-FB50-4412-9A0C-30BED0BF110E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.RealtimeChatApp", "YLPDotNetCore.RealtimeChatApp\YLPDotNetCore.RealtimeChatApp.csproj", "{A64225E9-D9AD-4371-B207-681FB70470B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,10 @@ Global
 		{71CCBAE4-FB50-4412-9A0C-30BED0BF110E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71CCBAE4-FB50-4412-9A0C-30BED0BF110E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71CCBAE4-FB50-4412-9A0C-30BED0BF110E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64225E9-D9AD-4371-B207-681FB70470B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64225E9-D9AD-4371-B207-681FB70470B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64225E9-D9AD-4371-B207-681FB70470B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64225E9-D9AD-4371-B207-681FB70470B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
