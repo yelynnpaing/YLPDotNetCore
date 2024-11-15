@@ -1,4 +1,5 @@
 using Serilog;
+using Serilog.Sinks.MSSqlServer;
 
 string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs/YLPDotNetCore.MvcChartLogging.txt");
 Log.Logger = new LoggerConfiguration()
@@ -6,6 +7,14 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File(filePath,
         rollingInterval: RollingInterval.Hour,
         rollOnFileSizeLimit: true)
+    .WriteTo
+    .MSSqlServer(
+        connectionString: "Server=DESKTOP-L3SMK21\\SQLEXPRESS;Database=YLPDotNetCore;User Id= sa; Password=sasa@123; TrustServerCertificate=true",
+        sinkOptions: new MSSqlServerSinkOptions 
+        { 
+            TableName = "Tbl_LogEvents" ,
+            AutoCreateSqlTable = true,
+        })
     .CreateLogger();
 
 try
