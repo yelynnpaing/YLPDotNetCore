@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppLog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.RealtimeChatApp", "YLPDotNetCore.RealtimeChatApp\YLPDotNetCore.RealtimeChatApp.csproj", "{A64225E9-D9AD-4371-B207-681FB70470B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.RealtimeChartApp", "YLPDotNetCore.RealtimeChartApp\YLPDotNetCore.RealtimeChartApp.csproj", "{77E0827B-6B09-44AA-95C5-699BABF08E80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +130,10 @@ Global
 		{A64225E9-D9AD-4371-B207-681FB70470B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A64225E9-D9AD-4371-B207-681FB70470B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A64225E9-D9AD-4371-B207-681FB70470B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E0827B-6B09-44AA-95C5-699BABF08E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E0827B-6B09-44AA-95C5-699BABF08E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E0827B-6B09-44AA-95C5-699BABF08E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E0827B-6B09-44AA-95C5-699BABF08E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
