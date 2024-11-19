@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppEFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.ConsoleAppEFCore.Databases", "YLPDotNetCore.ConsoleAppEFCore.Databases\YLPDotNetCore.ConsoleAppEFCore.Databases.csproj", "{A3842898-C75E-4D4B-A50C-B3780BB30BC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MvcDesignApp", "YLPDotNetCore.MvcDesignApp\YLPDotNetCore.MvcDesignApp.csproj", "{352FB7DE-42ED-4081-9AA0-3CD8F6D3A96E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -152,6 +154,10 @@ Global
 		{A3842898-C75E-4D4B-A50C-B3780BB30BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3842898-C75E-4D4B-A50C-B3780BB30BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3842898-C75E-4D4B-A50C-B3780BB30BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352FB7DE-42ED-4081-9AA0-3CD8F6D3A96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352FB7DE-42ED-4081-9AA0-3CD8F6D3A96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352FB7DE-42ED-4081-9AA0-3CD8F6D3A96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352FB7DE-42ED-4081-9AA0-3CD8F6D3A96E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
