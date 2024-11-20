@@ -58,6 +58,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MvcDesignApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.BlazorWebAssembly", "YLPDotNetCore.BlazorWebAssembly\YLPDotNetCore.BlazorWebAssembly.csproj", "{6CDFE968-A990-4397-9F1D-9E7E5D8EC713}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YLPDotNetCore.MvcApp2", "YLPDotNetCore.MvcApp2\YLPDotNetCore.MvcApp2.csproj", "{D02F6A89-9BC6-4AF0-AEE4-BDFCD69A60DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +166,10 @@ Global
 		{6CDFE968-A990-4397-9F1D-9E7E5D8EC713}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CDFE968-A990-4397-9F1D-9E7E5D8EC713}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CDFE968-A990-4397-9F1D-9E7E5D8EC713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02F6A89-9BC6-4AF0-AEE4-BDFCD69A60DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02F6A89-9BC6-4AF0-AEE4-BDFCD69A60DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02F6A89-9BC6-4AF0-AEE4-BDFCD69A60DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02F6A89-9BC6-4AF0-AEE4-BDFCD69A60DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

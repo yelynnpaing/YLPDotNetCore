@@ -1,0 +1,28 @@
+﻿@using YLPDotNetCore.MvcApp2.Database
+
+@model List<BlogEntity>
+
+<div class="m-5 p-5 border border-1">
+    <a href="Blog/Create" class="btn btn-outline-primary">New</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Blog Id</th>
+            <th>Blog Title
+            <th>Blog Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.BlogId</td>
+                <td>@item.BlogTitle</td>
+                <td>@item.BlogAuthor</td>
+                <td>@item.BlogContent</td>
+            </tr>
+        }
+   </tbody>
+</table>
