@@ -1,0 +1,47 @@
+﻿@page "/blog/create"
+@inject HttpClient httpClient
+@using System.Text
+@using static System.Net.Mime.MediaTypeNames
+@inject NavigationManager nav
+
+
+<h3>CreateBlog Page</h3>
+<div class="m-5 p-5 border border-1">
+
+    <div class="mb-3">
+        <label class="form-label">Blog Title</label>
+        <input type="text" class="form-control" @bind-value="@blog.BlogTitle">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Blog Author</label>
+        <input type="text" class="form-control" @bind-value="@blog.BlogAuthor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Blog Content</label>
+        <input type="text" class="form-control" @bind-value="@blog.BlogContent">
+    </div>
+
+    <button type="button" class="btn btn-primary" @onclick="Save">Save</button>
+    <NavLink href="/Blog" class="btn btn-outline-secondary">Back</NavLink>
+
+</div>
+
+
+
+@code {
+    private readonly BlogModel blog = new BlogModel();
+
+    private async Task Save()
+    {
+        var blogJson = JsonConvert.SerializeObject(blog);
+        var content = new StringContent(blogJson, Encoding.UTF8, Application.Json);
+        var response = await httpClient.PostAsync("/api/blog", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var jsonStr = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(jsonStr);
+            nav.NavigateTo("/blog");
+        }
+    }
+}
