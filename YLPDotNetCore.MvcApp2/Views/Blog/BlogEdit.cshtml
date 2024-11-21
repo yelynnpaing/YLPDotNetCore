@@ -1,0 +1,65 @@
+﻿@using YLPDotNetCore.MvcApp2.Database
+
+@model BlogEntity
+
+<div class="m-5 p-5 border border-1">
+
+    <div class="mb-3">
+        <label class="form-label" >Blog Title</label>
+        <input type="text" class="form-control" id="txtTitle" value="@Model.BlogTitle">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" >Blog Author</label>
+        <input type="text" class="form-control" id="txtAuthor" value="@Model.BlogAuthor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" >Blog Content</label>
+        <input type="text" class="form-control" id="txtContent" value="@Model.BlogContent">
+    </div>
+
+    <button type="button" class="btn btn-primary" id="btnUpdate">Update</button>
+    <a href="/Blog" class="btn btn-outline-secondary">Back</a>
+</div>
+
+@section scripts {
+    <script>
+        $('#btnUpdate').click(function(e){
+           // alert("hello");
+           e.preventDefault();
+            let title = $('#txtTitle').val();
+            let author = $('#txtAuthor').val();
+            let content = $('#txtContent').val();
+
+            let _blog = {
+                BlogTitle : title,
+                BlogAuthor : author,
+                BlogContent : content
+            }
+
+            // console.log(_blog);
+           $.ajax({
+                type: "POST",
+                url: "/Blog/Update/@Model.BlogId",
+                // data: JSON.stringify(_data),
+                // contentType: "application/json; charset=utf-8",
+                data: { blog: _blog},
+                dataType: "JSON",
+                success: function (result) {
+                    console.log("Result", result);
+
+                    if(!result.IsSuccess){
+                        alert(result.Message);
+                        return;
+                    }
+
+                    alert(result.Message);
+                    location.href = "/Blog";
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    alert("An error occurred: " + err.Message );
+                }
+            });
+        })
+    </script>
+}
