@@ -1,0 +1,79 @@
+﻿@page "/blog"
+
+<PageTitle>Blog List</PageTitle>
+<h3>Blog List Page</h3>
+<div class="m-5 p-5 border border-1">
+    <NavLink href="blog/create" class="btn btn-outline-primary">New</NavLink>
+</div>
+@if(_blogs is not null){
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Blog Id</th>
+                <th>Blog Title </th>
+                <th>Blog Author</th>
+                <th>Blog Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in _blogs)
+            {
+                var editUrl = $"/blog/edit/{item.BlogId}";
+                <tr>
+                    <td>
+                        <NavLink href="@editUrl" class="btn btn-sm btn-success">Edit1</NavLink>
+                        <button class="btn btn-sm btn-outline-danger btn-delete" @onclick="() => Delete(item.BlogId)">Delete</button>
+                    </td>
+                    <td>@item.BlogId</td>
+                    <td>@item.BlogTitle</td>
+                    <td>@item.BlogAuthor</td>
+                    <td>@item.BlogContent</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<BlogModel>? _blogs;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     _blogs = db.Blogs.ToList();
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await list();
+        }
+    }
+
+    private async Task list()
+    {
+         _blogs = db.Blogs.OrderByDescending(x => x.BlogId).ToList();
+         StateHasChanged();  
+    }
+
+    private async Task Delete(int id)
+    {
+        var confirm = await jsRuntime.InvokeAsync<bool>("confirm", "Are you sure want to delete ?");
+        if(!confirm) return;
+
+        var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
+        if (item is null)
+        {
+            await jsRuntime.InvokeVoidAsync("alert", "No data found.");
+            return;
+        }
+
+        db.Blogs.Remove(item);
+        var result = await db.SaveChangesAsync();
+        await jsRuntime.InvokeVoidAsync("alert", result > 0 ? "Deleting success." : "Deleting fail.");
+        nav.NavigateTo("/blog");
+        list();
+    }
+
+}

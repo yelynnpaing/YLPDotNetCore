@@ -1,0 +1,36 @@
+﻿@page "/blog/create"
+
+<h3>BlogCreatePage</h3>
+<div class="m-5 p-5 border border-1">
+
+    <div class="mb-3">
+        <label class="form-label">Blog Title</label>
+        <input type="text" class="form-control" @bind-value="@_blog.BlogTitle">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Blog Author</label>
+        <input type="text" class="form-control" @bind-value="@_blog.BlogAuthor">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Blog Content</label>
+        <input type="text" class="form-control" @bind-value="@_blog.BlogContent">
+    </div>
+
+    <button type="button" class="btn btn-primary" @onclick="Save">Save</button>
+    <NavLink href="/Blog" class="btn btn-outline-secondary">Back</NavLink>
+
+</div>
+
+
+@code {
+    private BlogModel? _blog = new BlogModel();
+
+    public async Task Save()
+    {
+        await db.Blogs.AddAsync(_blog);
+        var response = await db.SaveChangesAsync();
+        await jsRuntime.InvokeVoidAsync("alert", response > 0 ? "Saving success." : "Saving Fail.");
+        // _blog = new BlogModel();
+        nav.NavigateTo("/blog");
+    }
+}
